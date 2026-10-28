@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Anton&display=swap" rel="stylesheet">
+    <title>Interclasse</title>
+</head>
+<body>
+    
+
+    <div class="acessibilidade">
+    <button type="button" onclick="aumentarFonte()">A+</button>
+    <button type="button" onclick="diminuirFonte()">A-</button>
+    <button type="button" class="contraste" onclick="alternarContraste()">◐</button>
+    </div>
+
+    <header>
+        <img src="../img/logosesi.png"/>
+        <nav>
+            <a href="#Sobre">Sobre</a>
+            <a href="#MelhoresMomentos">Melhores Momentos</a>
+            <a href="#Vencedores">Vencedores</a>
+        </nav>
+    </header>
+
+    <section id="banner">
+        <img src="../img/BANNER1.png"/>
+        <img src="../img/banner2.png"/>
+    </section>
+
+    <section id="Sobre">
+        <div id="esquerda">
+        <h1>Sobre</h1>
+        <p>A Interclasse é um evento muito esperado pelos alunos, que reúne diferentes turmas em uma competição cheia de energia, diversão e espírito esportivo. 
+            Durante os jogos, os estudantes têm a oportunidade de representar suas salas, participar de diferentes modalidades esportivas e mostrar suas habilidades.</p>
+        </div>
+        <img src="../img/jogos.png"/>
+    </section>
+
+    <section id="MelhoresMomentos">
+        <h1>Melhores Momentos</h1>
+        <div id="esporte"> 
+            <div>
+            <img src="../img/barbara.png">
+            </div>
+            <div>
+            <img src="../img/amaral.png">
+            </div>
+            <div>
+            <img src="../img/kimberly.png">
+            </div>
+            <img src="../img/pedro.png">
+            <img src="../img/caua2.png">
+            <img src="../img/victor.png">
+        </div>
+        
+        <div id="bo">
+        <button type="submit">
+            <a href="https://drive.google.com/drive/folders/1QYnktVDntYU2Eo-d0yTTRCAB03qewHbC?usp=sharing">Baixe aqui suas imagens </a>
+        </button>
+        </div>
+
+    </section>
+
+    <section class="pagina" id="Vencedores">
+    <h1>VENCEDORES</h1>
+
+    <div class="vencedores">
+        <button class="seta seta-esquerda"
+                id="anterior"
+                aria-label="Equipe anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 4 L7 12 L15 20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <article class="card-vencedor" id="cardVencedor">
+            <h2 id="modalidade">FUTEBOL - EM</h2>
+
+            <img
+                id="imagemEquipe"
+                src="../img/2b.jpg"
+                alt="Equipe vencedora de futebol"
+            >
+
+            <p id="turma">2º ano B</p>
+        </article>
+
+        <button class="seta seta-direita"
+                id="proximo"
+                aria-label="Próxima equipe">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 4 L17 12 L9 20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+</section>
+<script src="../js/inter.js"></script>
+
+
+    <footer>
+        <p>Todos os direitos reservados ao grupo de marketing do 2°B - Sesi, Catanduva. 
+            Copyright © 2026</p>
+    </footer>
+</body>
+</html>

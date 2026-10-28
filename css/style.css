@@ -1,0 +1,882 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    font-family: Arial, Helvetica;
+    overflow-x: hidden;
+}
+
+.acessibilidade {
+    background-color: #7e1010;
+    height: 2vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.acessibilidade button {
+    background-color: #ffedb0;
+    color: #7e1010;
+    border: none;
+    border-radius: 30px;
+    height: 25px;
+    min-width: 40px;
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.acessibilidade .contraste {
+    background: transparent;
+    color: #ffedb0;
+    border: 3px solid #ffedb0;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    padding: 0;
+    font-size: 25px;
+    margin-left: 5px;
+}
+
+.acessibilidade button.contraste {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 30px;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+body.modo-escuro {
+    background-color: #222;
+    color: white;
+}
+
+body.modo-escuro header,
+body.modo-escuro footer {
+    background-color: #111;
+    color: white;
+}
+
+
+header{
+    background-color: #ffeaaa;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+header img{
+    width: 6%;
+    height: auto;
+}
+
+header nav a{
+    margin-right: 2vw;
+    text-decoration: none;
+    color: #7e1010;
+    font-family: "Anton", sans-serif;
+}
+
+
+#banner img{
+    width: 99vw;
+    height: 75vh;
+}
+
+#Sobre{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+}
+
+#esquerda{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    padding: 50px;
+}
+
+#esquerda h1{
+    color: #7e1010;
+    font-family: "Anton", sans-serif;
+    font-size: 60px;
+}
+
+#esquerda p{
+    font-family: "Actor", sans-serif;
+    font-size: 35px;
+    margin-top: 22px;
+}
+
+#Sobre img{
+    width: 40%;
+    height: auto;
+    margin-top: 10vh;
+}
+
+
+#MelhoresMomentos {
+    background-color: #ffeaaa;
+    width: 100%;
+    min-height: 70vw;
+}
+
+#MelhoresMomentos h1 {
+    color: #7e1010;
+    font-size: 60px;
+    font-family: "Anton", sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5vh;
+}
+
+#esporte {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    place-content: center;
+    gap: 30px;
+    padding: 35px;
+}
+
+#esporte img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2%;
+}
+
+#bo button{
+    margin-top: 15px;
+    background: #7e1010;   
+    padding: 12px 21px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bo button a{
+    color: #ffeaaa;
+    font-family: "Anton", sans-serif;
+    text-decoration: none;
+}
+
+
+.pagina {
+    background-color: #7e1010;
+    min-height: 65vh;
+    padding: 30px 16px 50px;
+}
+
+h1 {
+    margin: 0 0 30px;
+    text-align: center;
+    color: #fff0a8;
+    font-size: clamp(30px, 4vw, 40px);
+    font-weight: 900;
+}
+
+.vencedores {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    min-height: 330px;
+}
+
+.card-vencedor {
+    width: 550px;
+    text-align: center;
+}
+
+.card-vencedor h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+
+
+.card-vencedor img {
+    display: block;
+    width: 500px;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: cover;
+    background: #d9d9d9;
+}
+
+
+.card-vencedor p {
+    margin: 10px 0 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Setas de navegação */
+.seta {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 9px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #a00808;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.seta svg {
+    width: 100%;
+    height: 100%;
+}
+
+.seta:hover {
+    background: #fff0a8;
+}
+
+.seta:active {
+    transform: translateY(-50%) scale(0.92);
+}
+
+.seta-esquerda {
+    left: -90px;
+}
+
+.seta-direita {
+    right: -90px;
+}
+
+
+@media (max-width: 480px) {
+    .pagina {
+        padding-top: 28px;
+    }
+
+    h1 {
+        margin-bottom: 26px;
+    }
+
+    .vencedores {
+        max-width: 360px;
+        min-height: 290px;
+    }
+
+    .card-vencedor {
+        width: 280px;
+        max-width: calc(100% - 88px);
+    }
+
+    .card-vencedor img {
+    width: 100%;
+    height: 180px;
+    aspect-ratio: auto;
+    object-fit: cover;
+}
+
+    .card-vencedor h2 {
+        font-size: 17px;
+    }
+
+    .card-vencedor p {
+        font-size: 17px;
+    }
+
+    .seta {
+        width: 36px;
+        height: 36px;
+        padding: 7px;
+    }
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1%;
+    background-color: white;
+    color: black;
+    font-family: "Actor", sans-serif;
+    height: 2vw;
+
+}
+
+body.modo-escuro nav a {
+    color: #ffeaaa;
+}
+
+body.modo-escuro nav a:hover {
+    color: #ffeaaa;
+}
+
+body.modo-escuro h1,
+body.modo-escuro h2,
+body.modo-escuro h3 {
+    color: #ffeaaa !important;
+}
+
+
+body.modo-escuro footer {
+    background-color: #111111 !important;
+    color: #ffffff;
+    margin-top: 0;
+    width: 100%;
+    min-height: 50px;
+    padding: 15px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body.modo-escuro .acessibilidade {
+    background-color: #353030 !important;
+}
+
+/* Botões A+ e A- */
+body.modo-escuro .acessibilidade button:not(.contraste) {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+}
+
+body.modo-escuro .acessibilidade button.contraste {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    font-size: 30px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    padding: 0;
+}
+
+body.modo-escuro header img {
+    filter: brightness(0) invert(1);
+}
+
+body.modo-escuro header nav a {
+    color: #ffffff !important;
+}
+
+body.modo-escuro #Sobre {
+    background-color: #353030 !important;
+}
+
+body.modo-escuro #esquerda h1,
+body.modo-escuro #esquerda p {
+    color: #ffffff !important;
+}
+
+body.modo-escuro #MelhoresMomentos {
+    background-color: #000000 !important;
+}
+
+body.modo-escuro #MelhoresMomentos h1 {
+    color: #ffffff !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+body.modo-escuro #bo button {
+    background-color: #ffffff !important;
+    border: none !important;
+}
+
+body.modo-escuro #bo button p {
+    color: #000000 !important;
+}
+
+body.modo-escuro .pagina {
+    background-color: #353030 !important;
+}
+
+body.modo-escuro .pagina h1,
+body.modo-escuro .card-vencedor h2,
+body.modo-escuro .card-vencedor p {
+    color: #ffffff !important;
+}
+
+body.modo-escuro .seta {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    transition: none;
+}
+
+body.modo-escuro .seta:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+body.modo-escuro .seta svg {
+    stroke: #000000 !important;
+    color: #000000 !important;
+}
+
+
+#banner {
+    width: 100%;
+    height: 555px;
+    overflow: hidden;
+}
+
+#banner {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    animation: passarBanner 6s infinite;
+}
+
+#banner img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@keyframes passarBanner {
+
+    /* Banner 1 parado */
+    0% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(0);
+    }
+
+    /* Vai para o Banner 2 */
+    50% {
+        transform: translateX(-50%);
+    }
+
+    /* Banner 2 parado */
+    90% {
+        transform: translateX(-50%);
+    }
+
+    /* Volta para o Banner 1 */
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 468px) {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    /* ACESSIBILIDADE */
+
+    .acessibilidade {
+        width: 100%;
+        height: auto;
+        min-height: 40px;
+        padding: 6px 10px;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .acessibilidade button {
+        height: 28px;
+        min-width: 35px;
+        padding: 0 8px;
+        font-size: 16px;
+    }
+
+    .acessibilidade button.contraste {
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+        font-size: 24px;
+    }
+
+    /* CABEÇALHO */
+
+    header {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 60px;
+        margin: 0;
+        padding: 10px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    header img {
+        width: 50px;
+        max-width: 25%;
+        height: auto;
+    }
+
+    header nav {
+        display: flex;
+        flex: 1;
+        min-width: 0;
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+    }
+
+    header nav a {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    /* BANNER */
+
+    #banner {
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        line-height: 0;
+        animation: none;
+    }
+
+    #banner img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+        flex: none;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    #banner img:first-child {
+        animation-name: bannerMobileUm;
+    }
+
+    #banner img:nth-child(2) {
+        animation-name: bannerMobileDois;
+    }
+
+    /* SOBRE */
+
+    #Sobre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    #esquerda {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    #esquerda h1 {
+        font-size: 34px;
+    }
+
+    #esquerda p {
+        width: 100%;
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 1.5;
+        overflow-wrap: break-word;
+    }
+
+    #Sobre img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 0;
+        object-fit: contain;
+    }
+
+    /* MELHORES MOMENTOS */
+
+    #MelhoresMomentos {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+        padding: 0 0 20px;
+        overflow: hidden;
+    }
+
+    #MelhoresMomentos h1 {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 25px 8px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #esporte {
+        display: grid;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        gap: 12px;
+        padding: 10px;
+        margin: 0;
+    }
+
+    #esporte img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 170px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 6px;
+    }
+
+    /* BOTÃO */
+
+    #bo {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    #bo button {
+        display: flex;
+        justify-content: center;
+        margin: 15px auto;
+        max-width: 100%;
+    }
+
+    #bo button a:hover{
+        color: #ffeaaa;
+    }
+    /* VENCEDORES */
+
+    .pagina {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 0;
+        padding: 25px 10px 30px;
+        overflow: hidden;
+    }
+
+    .pagina h1 {
+        width: 100%;
+        font-size: 28px;
+        overflow-wrap: break-word;
+    }
+
+    .vencedores {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 0;
+        padding: 0 32px;
+    }
+
+    .card-vencedor {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .card-vencedor h2 {
+        font-size: 16px;
+        overflow-wrap: break-word;
+    }
+
+    .card-vencedor img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .card-vencedor p {
+        font-size: 16px;
+        overflow-wrap: break-word;
+    }
+
+    /* SETAS */
+
+    .seta {
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+    }
+
+    .seta-esquerda {
+        left: 0;
+    }
+
+    .seta-direita {
+        right: 0;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        min-height: 50px;
+        height: auto;
+        margin: 0;
+        padding: 15px 10px;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    /* MODO ESCURO */
+
+    body.modo-escuro header,
+    body.modo-escuro footer {
+        background-color: #111 !important;
+        color: white;
+    }
+
+    body.modo-escuro #Sobre {
+        background-color: #353030 !important;
+    }
+
+    body.modo-escuro #esquerda h1,
+    body.modo-escuro #esquerda p {
+        color: white !important;
+    }
+
+    body.modo-escuro #MelhoresMomentos {
+        background-color: #000 !important;
+    }
+
+    body.modo-escuro #MelhoresMomentos h1 {
+        color: white !important;
+    }
+
+    body.modo-escuro .pagina {
+        background-color: #353030 !important;
+    }
+
+    body.modo-escuro .seta {
+        background-color: white !important;
+        color: black !important;
+    }
+}
+
+/* ANIMAÇÃO MOBILE */
+
+@keyframes bannerMobileUm {
+    0%, 40% {
+        transform: translateX(0);
+    }
+
+    50%, 90% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bannerMobileDois {
+    0%, 40% {
+        transform: translateX(100%);
+    }
+
+    50%, 90% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
